@@ -94,7 +94,7 @@ RUN \
 	rm ./*.tar.gz && \
 	rm -r openal-*
 
-ENV STATIC_LLVM_VER=19.1.7
+ENV STATIC_LLVM_VER=21.1.8
 RUN \
 	curl -sSfLO https://github.com/llvm/llvm-project/releases/download/llvmorg-${STATIC_LLVM_VER}/llvm-project-${STATIC_LLVM_VER}.src.tar.xz && \
 	tar -xf llvm-*.tar.xz && \
@@ -198,7 +198,7 @@ RUN \
 	shellcheck --version
 
 # We need to build a custom version of SDL3 as well
-ENV SDLVER=3.4.10
+ENV SDLVER=3.4.12
 RUN \
 	curl -sSfL -o SDL.tar.gz https://github.com/libsdl-org/SDL/releases/download/release-${SDLVER}/SDL3-${SDLVER}.tar.gz && \
 	tar -xf SDL.tar.gz && \
