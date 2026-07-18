@@ -151,7 +151,7 @@ RUN \
 	rm ./*.tar.gz && \
 	rm -r openal-*
 
-ENV STATIC_LLVM_VER=21.1.8
+ENV STATIC_LLVM_VER=22.1.8
 RUN \
 	curl -sSfLO https://github.com/llvm/llvm-project/releases/download/llvmorg-${STATIC_LLVM_VER}/llvm-project-${STATIC_LLVM_VER}.src.tar.xz && \
 	tar -xf llvm-*.tar.xz && \
